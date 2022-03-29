@@ -1,0 +1,49 @@
+body{
+    text-align:center;
+    background: buttonface;
+}
+
+#results_table {
+    border: 1px solid;
+}
+
+.question_selector_not_opened{
+    background-color: white;
+}
+
+.question_selector_opened{
+   background-color: grey;
+}
+
+.question_selector_answered{
+    background-color: green;
+}
+
+.question_selector{
+    width: 10px;
+    display:inline;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#start_panel {
+    text-align: left;
+}
+
+.right_answer {
+    background-color: green;
+}
+
+.wrong_answer {
+    background-color: red;
+}
+
+#question{
+    width: 500px;
+    height:100px;
+}
+
+#answers_field{
+    width: 500px;
+    text-align: left;
+}

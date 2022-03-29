@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Абузяров Айнур 21Вп2 Вариант1 -->
+<html>
+    <head>
+        <title>Опросник</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id = "lab_title">
+            <h1> ЛР4 javascript. Опросник (Вариант 1)</h1>
+        </div>
+        <hr>
+        <p>Создать опросник по заданной предметной области. По клику на кнопке
+            должна выполняться проверка вариантов ответов пользователя и выдаваться
+            результат об успешном/не успешном завершении тестирования с подсветкой
+            вопросов с правильными/неправильными ответами (выделение красным и
+            зеленым). Анкета должна содержать не менее 10 вопросов. Каждый вопрос
+            должен содержать не менее 4 вариантов ответов. Должен быть предусмотрен
+            вопрос с множественным выбором вариантов (Check Box), вопрос открытого
+            типа (Text Box), вопросы с выбором из выпадающего списка, вопросы с
+            выбором одного варианта ответа (Radio Button). Станица должна быть
+            оформлена с использованием CSS. Предмет «Природоведение». Тестирование по теме
+            «Взаимосвязь здоровья и образа жизни».</p>
+        <hr>
+        <div id="start_panel">
+            <input type ="checkbox" id="mix_questions">
+            Перемешивать вопросы
+            <br>
+            <input type ="checkbox" id="mix_answers">
+            Перемешивать ответы
+            <br>
+            Время на выполнение:
+            <input type="time" id="time" value="05:00">
+            <br>
+            <input type ="button" value="Начать" onclick="Starter.start(questions)">
+        </div>
+        <table id="questions_zone" hidden border="1px">
+            <tbody>
+                <tr>
+                    <td width="500px"> <p id ="question"> </p> </td>
+                    <td> <div id ="answers_field"></div> </td>
+                </tr>
+                <tr>
+                    <td id ="question_selectors">  </td>
+                    <td> 
+                        <p id="timer"></p> 
+                        <input type="button" onclick="Finisher.finish(questions)" 
+                               value="Закончить"> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table hidden id="results_table">
+            <tbody>
+                <tr>
+                    <td>
+                        №
+                    </td>
+                    <td>
+                        Вопрос
+                    </td>
+                    <td>
+                        Ответ
+                    </td>
+                    <td>
+                        Правильный ответ
+                    </td>
+                    <td>
+                        Максимальный балл
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p id="results"></p>
+    </body>
+    <script src="js/script.js" type="text/javascript"></script>
+</html>
